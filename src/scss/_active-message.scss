@@ -2,7 +2,7 @@
   width: 320px;
   height: 100%;
 
-  position: absolute;
+  position: fixed;
   right: 0;
   top: 0;
   box-shadow: 16px 0px 52px 0px #0e185033, -2px 0 4px 0px #454f7e05;
@@ -10,12 +10,14 @@
   background-color: $white;
   z-index: 20;
 }
-.container-active-messagejs {
+.container-active-messagejs,
+.menu-active-messagejs {
   display: block;
 }
+
 .nav-active-message__button {
   margin: 15px;
-  margin-top: 0;
+  margin-top: 15px;
   width: 40px;
   height: 40px;
   background-color: #ff3e79;
@@ -25,11 +27,8 @@
   background-position: center;
   border: none;
 
-  --translateX: -88px;
-  --translateY: 47px;
   --scale: 1;
-  transform: translateX(var(--translateX)) scale(var(--scale))
-    translateY(var(--translateY));
+  transform: scale(var(--scale));
   transition: --scale 0.3s, opacity 0.3s ease;
   &:hover {
     opacity: 0.5;
@@ -113,6 +112,15 @@
     }
   }
 }
+@media (min-width: 768px) {
+  .nav-active-message__button {
+    transform: translateX(var(--translateX)) translateY(var(--translateY));
+    --translateX: -88px;
+    --translateY: 47px;
+    margin-top: 0;
+  }
+}
+
 @media (min-width: 1440px) {
   .container-active-message {
     width: 440px;

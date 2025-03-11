@@ -51,3 +51,58 @@ arrowOpen.addEventListener('click', function () {
     arrowOpen.textContent = 'Читать дальше'
   }
 })
+// для header message
+const buttonOpenMessage = document.querySelector('.nav__list_display-message')
+const openSideMenu = document.querySelector('.menu-active-message')
+const closeSideMenu = document.querySelector('.nav-active-message__button')
+const blurAreaMessageHeader = document.querySelector(
+  '.blurriness-message-header'
+)
+
+buttonOpenMessage.addEventListener('click', function () {
+  openSideMenu.classList.add('menu-active-messagejs')
+  blurAreaMessageHeader.classList.add('blurriness-message-headerjs')
+})
+
+closeSideMenu.addEventListener('click', function () {
+  openSideMenu.classList.remove('menu-active-messagejs')
+  blurAreaMessageHeader.classList.remove('blurriness-message-headerjs')
+})
+
+document.addEventListener('click', function (event) {
+  if (
+    !openSideMenu.contains(event.target) &&
+    !buttonOpenMessage.contains(event.target)
+  ) {
+    openSideMenu.classList.remove('menu-active-messagejs')
+    blurAreaMessageHeader.classList.remove('blurriness-message-headerjs')
+  }
+})
+// для header telephone
+const buttonOpenTelephone = document.querySelector('.nav__list_display-call')
+const openSideMenuTelephone = document.querySelector('.menu-active-telephone')
+const closeSideMenuTelephone = document.querySelector(
+  '.nav-active-telephone__button'
+)
+const blurAreaTelephoneHeader = document.querySelector(
+  '.blurriness-telephone-header'
+)
+buttonOpenTelephone.addEventListener('click', function () {
+  openSideMenuTelephone.classList.add('menu-active-telephonejs')
+  blurAreaTelephoneHeader.classList.add('blurriness-telephone-headerjs')
+})
+
+closeSideMenuTelephone.addEventListener('click', function () {
+  openSideMenuTelephone.classList.remove('menu-active-telephonejs')
+  blurAreaTelephoneHeader.classList.remove('blurriness-telephone-headerjs')
+})
+
+document.addEventListener('click', function (event) {
+  if (
+    !openSideMenuTelephone.contains(event.target) &&
+    !buttonOpenTelephone.contains(event.target)
+  ) {
+    openSideMenuTelephone.classList.remove('menu-active-telephonejs')
+    blurAreaTelephoneHeader.classList.remove('blurriness-telephone-headerjs')
+  }
+})

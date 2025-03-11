@@ -2,7 +2,7 @@
   width: 320px;
   height: 100%;
 
-  position: absolute;
+  position: fixed;
   right: 0;
   top: 0;
   box-shadow: 16px 0px 52px 0px #0e185033, -2px 0 4px 0px #454f7e05;
@@ -10,9 +10,11 @@
   background-color: $white;
   z-index: 20;
 }
-.container-active-telephonejs {
+.container-active-telephonejs,
+.menu-active-telephonejs {
   display: block;
 }
+
 .nav-active-telephone__button {
   margin: 15px;
   margin-top: 0;

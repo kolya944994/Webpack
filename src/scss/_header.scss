@@ -13,12 +13,13 @@ $black: #1b1c21;
   font-family: 'TT Lakes', sans-serif;
   background-color: $ghostlyWhite;
 }
-.blurriness-messagejs {
+.blurriness-messagejs,
+.blurriness-telephonejs,
+.blurriness-message-headerjs,
+.blurriness-telephone-headerjs {
   opacity: 0.05;
 }
-.blurriness-telephonejs {
-  opacity: 0.05;
-}
+
 .nav {
   display: flex;
   justify-content: space-between;
@@ -205,22 +206,23 @@ $black: #1b1c21;
 }
 
 @media (min-width: 768px) {
-  .nav__list {
-    display: flex;
-  }
-  .nav__list_order-logo {
-    order: 1;
-  }
+  .nav {
+    .nav__list {
+      display: flex;
+    }
+    .nav__list_order-logo {
+      order: 1;
+    }
 
-  .nav__menu-right {
-    margin-right: 20px;
-  }
+    .nav__menu-right {
+      margin-right: 20px;
+    }
 
-  .nav .nav__menu-center {
-    display: flex;
-    margin-left: auto;
+    .nav__menu-center {
+      display: flex;
+      margin-left: auto;
+    }
   }
-
   .description {
     display: flex;
 
@@ -327,10 +329,11 @@ $black: #1b1c21;
   .title-services {
     margin-top: -50px;
   }
-
-  .picture__info {
-    border-radius: 5px;
-    min-width: 50%;
+  .picture {
+    .picture__info {
+      border-radius: 5px;
+      min-width: 50%;
+    }
   }
 }
 @media (min-width: 1440px) {
