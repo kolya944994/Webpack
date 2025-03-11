@@ -125,7 +125,7 @@ $black: #1b1c21;
   position: relative;
 
   &::before {
-    content: url(/img/highlight.svg);
+    content: url(../img/highlight.svg);
     position: absolute;
     left: 0px;
   }
@@ -185,12 +185,12 @@ $black: #1b1c21;
         cursor: pointer;
 
         &::before {
-          content: url(/img/expand.svg);
+          content: url(../img/expand.svg);
           position: absolute;
           left: 0px;
         }
         &js::before {
-          content: url(/img/expand.svg);
+          content: url(../img/expand.svg);
           position: absolute;
           left: 0px;
           transform: rotate(180deg);
