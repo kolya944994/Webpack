@@ -1,0 +1,120 @@
+.title {
+  background: linear-gradient(to right, $ghostlyWhite, $white);
+
+  .title__text {
+    display: block;
+    color: $grey;
+    padding: 15px;
+    font-family: TT Lakes;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    margin: 0px;
+    margin-bottom: 15px;
+  }
+}
+.menu-brand {
+  background-color: $ghostlyWhite;
+  .swiper-slide {
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: space-between;
+
+    border: 1px solid $platinum;
+    padding: 15px 0px;
+    background-color: $white;
+    border-radius: 7px;
+    align-items: center;
+    height: auto;
+
+    .brand__button {
+      margin-right: 10px;
+      width: 40px;
+      height: 40px;
+      background-color: $white;
+      border: none;
+      border-radius: 50px;
+      background-position: 50% 50%;
+      border: 2px solid $pink;
+      background-image: url(../img/arrow.svg);
+      background-repeat: no-repeat;
+      cursor: pointer;
+      transform: scale(var(--scale));
+
+      --scale: 1;
+      transition: --scale 0.3s, opacity 0.3s ease;
+      &:hover {
+        opacity: 0.5;
+        --scale: 1.2;
+      }
+      &:active {
+        opacity: 0.8;
+        --scale: 1.1;
+      }
+    }
+    .brand__img {
+      margin-left: 10px;
+    }
+  }
+
+  .swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    background-color: $lightGrey;
+  }
+}
+.additional-menu {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .swiper-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(2, 1fr);
+    grid-auto-rows: 0;
+    column-gap: 0px;
+
+    .swiper-slide {
+      width: auto;
+      height: auto;
+      margin: 10px 15px;
+      padding: 15px;
+    }
+  }
+  .swiper-wrapperjs {
+    grid-auto-rows: auto;
+  }
+  .additional-menu {
+    display: block;
+    position: relative;
+    margin-top: 15px;
+    margin-bottom: 30px;
+    .additional-menu__button {
+      margin-left: 35px;
+      background-color: $ghostlyWhite;
+      border: none;
+      cursor: pointer;
+    }
+    .additional-menu__button::before {
+      content: url(../img/buttonarrow.svg);
+      position: absolute;
+      left: 0;
+      top: -2px;
+      margin-left: 15px;
+    }
+    .additional-menu__button_click::before {
+      position: absolute;
+      left: 0;
+      top: -5px;
+      margin-left: 15px;
+      transform: rotate(180deg);
+    }
+  }
+}
+
+@media (min-width: 1120px) {
+  .swiper-wrapper {
+    grid-template-columns: repeat(4, auto);
+  }
+}

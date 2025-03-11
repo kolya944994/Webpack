@@ -1,0 +1,188 @@
+.title-footer {
+  background: linear-gradient(to right, $ghostlyWhite, $white);
+
+  .title-footer__text {
+    display: block;
+    color: $grey;
+    padding: 15px;
+    font-family: TT Lakes;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    margin: 0px;
+    margin-bottom: 15px;
+  }
+}
+
+.swiper-wrapper-footer {
+  background-color: $ghostlyWhite;
+
+  .swiper-slide-footer {
+    margin-bottom: 35px;
+    .table {
+      background-color: $white;
+      font-size: 14px;
+      width: 100%;
+      height: auto;
+      padding: 15px;
+      border-radius: 7px;
+      .table__line {
+        text-align: left;
+        position: relative;
+        .table__title {
+          color: $grey;
+        }
+
+        .table__cell_position {
+          text-align: end;
+        }
+
+        .table__button {
+          text-decoration: none;
+          background-image: url(../img/dropdown.svg);
+          background-repeat: no-repeat;
+          background-position: 85% 50%;
+          margin-top: 10px;
+          font-family: 'TT Lakes-bold', sans-serif;
+          font-size: 12px;
+          padding: 10px;
+          padding-left: 15px;
+          padding-right: 45px;
+          color: #ffffff;
+          border: 0;
+          border-radius: 20px;
+          background-color: #ff3e79;
+          cursor: pointer;
+          transform: scale(var(--scale));
+
+          --scale: 1;
+          transition: --scale 0.3s, opacity 0.3s ease;
+          &:hover {
+            opacity: 0.5;
+            --scale: 1.2;
+          }
+          &:active {
+            opacity: 0.8;
+            --scale: 1.1;
+          }
+        }
+      }
+    }
+  }
+}
+.swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background-color: $lightGrey;
+}
+.content {
+  padding: 15px;
+
+  .content__info {
+    margin: 0;
+  }
+  .content__commercial-proposal {
+    .content__commercial-link {
+      text-decoration: none;
+      font-family: 'TT Lakes-medium', sans-serif;
+      color: $black;
+    }
+    &::after {
+      content: url(../img/lineRed.svg);
+      position: relative;
+      top: 2px;
+      left: 8px;
+    }
+  }
+}
+.footer-footer {
+  .footer-footer__content {
+    font-family: 'TT Lakes-medium', sans-serif;
+    color: $grey;
+    text-align: center;
+    font-size: 14px;
+  }
+  .footer-footer__link {
+    text-decoration: none;
+    color: $grey;
+  }
+}
+.price-list__list {
+  display: none;
+}
+@media (min-width: 768px) {
+  .swiper-footer {
+    display: none;
+  }
+  .price-list {
+    .price-list__container {
+      margin: 15px;
+      margin-top: 0px;
+      border-radius: 6px;
+      background-color: $white;
+    }
+    .price-list__list {
+      display: grid;
+      grid-template-columns: (3.5fr 1fr 1fr 1fr);
+      padding: 0;
+      margin: 0;
+
+      list-style-type: none;
+      padding: 15px;
+      .price-list__item {
+        .table__button {
+          text-decoration: none;
+          background-image: url(../img/dropdown.svg);
+          background-repeat: no-repeat;
+          background-position: 85% 50%;
+          margin-top: 10px;
+          font-family: 'TT Lakes-bold', sans-serif;
+          font-size: 12px;
+          padding: 10px;
+          padding-left: 15px;
+          padding-right: 45px;
+          color: #ffffff;
+          border: 0;
+          border-radius: 20px;
+          background-color: #ff3e79;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  .price-list__list_color {
+    color: $grey;
+    background-color: $ghostlyWhite;
+  }
+  .content {
+    max-width: 55%;
+  }
+  .footer-footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    .footer-footer__content {
+      padding: 15px;
+    }
+    .footer-footer__content_position-left {
+      text-align: start;
+      vertical-align: top;
+    }
+    .footer-footer__content_position-center {
+      text-align: center;
+    }
+    .footer-footer__content_position-right {
+      text-align: end;
+    }
+  }
+}
+hr {
+  border: 1px solid $ghostlyWhite;
+
+  width: 96%;
+}
+@media (min-width: 1120px) {
+  .content {
+    max-width: 48%;
+  }
+}

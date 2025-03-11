@@ -1,0 +1,120 @@
+.container-active-message {
+  width: 320px;
+  height: 100%;
+
+  position: absolute;
+  right: 0;
+  top: 0;
+  box-shadow: 16px 0px 52px 0px #0e185033, -2px 0 4px 0px #454f7e05;
+  display: none;
+  background-color: $white;
+  z-index: 20;
+}
+.container-active-messagejs {
+  display: block;
+}
+.nav-active-message__button {
+  margin: 15px;
+  margin-top: 0;
+  width: 40px;
+  height: 40px;
+  background-color: #ff3e79;
+  border-radius: 50px;
+  background-image: url(../img/icon.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+
+  --translateX: -88px;
+  --translateY: 47px;
+  --scale: 1;
+  transform: translateX(var(--translateX)) scale(var(--scale))
+    translateY(var(--translateY));
+  transition: --scale 0.3s, opacity 0.3s ease;
+  &:hover {
+    opacity: 0.5;
+    --scale: 1.2;
+  }
+  &:active {
+    opacity: 0.8;
+    --scale: 1.1;
+  }
+}
+
+.title-active-message {
+  position: relative;
+  .title-active-message__content {
+    margin: 15px;
+    margin-top: 0;
+    font-family: 'TT Lakes-bold', sans-serif;
+    &::before {
+      content: url(../img/highlight.svg);
+      position: absolute;
+      left: 0px;
+      bottom: -10px;
+    }
+  }
+}
+
+.contact-information__list {
+  margin: 15px;
+  text-align: center;
+  .contact-information__input-field {
+    margin: 5px 0;
+    border: none;
+    border: 1px solid #eaeaea;
+    border-radius: 8px;
+    padding: 15px;
+    width: 100%;
+    height: auto;
+    &:focus {
+      outline: 1px solid black;
+    }
+  }
+  .contact-information__content {
+    font-size: 14px;
+    text-align: start;
+    .contact-information__link {
+      cursor: pointer;
+      text-decoration: none;
+      color: #ff3e79;
+    }
+  }
+  .contact-information__container_position {
+    text-align: right;
+    .contact-information__button {
+      background-image: url(../img/dropdown.svg);
+      background-repeat: no-repeat;
+      background-position: 85% 50%;
+      margin-top: 10px;
+      font-family: 'TT Lakes-bold', sans-serif;
+      font-size: 12px;
+      padding: 10px;
+      padding-left: 15px;
+      padding-right: 45px;
+      color: #ffffff;
+      border: 0;
+      border-radius: 20px;
+      background-color: #ff3e79;
+      cursor: pointer;
+
+      transform: scale(var(--scale));
+
+      --scale: 1;
+      transition: --scale 0.3s, opacity 0.3s ease;
+      &:hover {
+        opacity: 0.5;
+        --scale: 1.2;
+      }
+      &:active {
+        opacity: 0.8;
+        --scale: 1.1;
+      }
+    }
+  }
+}
+@media (min-width: 1440px) {
+  .container-active-message {
+    width: 440px;
+  }
+}

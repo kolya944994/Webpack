@@ -1,0 +1,120 @@
+.title-menu-technique {
+  background: linear-gradient(to right, $ghostlyWhite, $white);
+
+  .title-menu-technique__text {
+    display: block;
+    color: $grey;
+    padding: 15px;
+    font-family: TT Lakes;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    margin: 0px;
+    margin-bottom: 15px;
+  }
+}
+.services {
+  background-color: $ghostlyWhite;
+
+  .swiper-slide-menu-technique {
+    text-align: end;
+    margin-bottom: 50px;
+    border: 1px solid $platinum;
+    padding: 0px 0px;
+    background-color: $white;
+    border-radius: 7px;
+    height: auto;
+    .services__button {
+      margin-right: 10px;
+      display: inline-block;
+      margin-top: 30px;
+      width: 40px;
+      height: 40px;
+      background-color: $white;
+      border: none;
+      border-radius: 50px;
+      background-position: 50% 50%;
+      border: 2px solid $pink;
+      background-image: url(../img/arrow.svg);
+      background-repeat: no-repeat;
+      cursor: pointer;
+      transform: scale(var(--scale));
+
+      --scale: 1;
+      transition: --scale 0.3s, opacity 0.3s ease;
+      &:hover {
+        opacity: 0.5;
+        --scale: 1.2;
+      }
+      &:active {
+        opacity: 0.8;
+        --scale: 1.1;
+      }
+    }
+    .services__content {
+      margin: 10px 5px;
+      display: flex;
+    }
+  }
+  .swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    background-color: $lightGrey;
+  }
+}
+.additional-menu-menu-technique {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .swiper-wrapper-menu-technique {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(1, 1fr);
+    grid-auto-rows: 0;
+    column-gap: 0px;
+
+    .swiper-slide-menu-technique {
+      width: auto;
+      height: auto;
+      margin: 10px 15px;
+      padding: 15px;
+    }
+  }
+  .swiper-wrapper-menu-techniquejs {
+    grid-auto-rows: auto;
+  }
+  .additional-menu-menu-technique {
+    display: block;
+    position: relative;
+
+    margin-top: 15px;
+    margin-bottom: 30px;
+
+    .additional-menu-menu-technique__button {
+      margin-left: 35px;
+      background-color: $ghostlyWhite;
+      border: none;
+      cursor: pointer;
+      &::before {
+        content: url(../img/buttonarrow.svg);
+        position: absolute;
+        left: 0;
+        top: -2px;
+        margin-left: 15px;
+      }
+      &_click::before {
+        position: absolute;
+        left: 0;
+        top: -5px;
+        margin-left: 15px;
+        transform: rotate(180deg);
+      }
+    }
+  }
+}
+@media (min-width: 1120px) {
+  .swiper-wrapper-menu-technique {
+    grid-template-columns: repeat(4, auto);
+  }
+}

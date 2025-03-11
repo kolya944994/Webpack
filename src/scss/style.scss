@@ -1,0 +1,24 @@
+@import 'header', 'menu-brands', 'menu-technique', 'footer', 'side-menu',
+  'active-message', 'active-telephone';
+
+@font-face {
+  font-family: 'TT Lakes';
+  font-weight: normal;
+  font-style: normal;
+  src: url(/src/fonts/TTLakesCompressed-Regular.woff) format(woff);
+  font-display: swap;
+}
+@font-face {
+  font-family: 'TT Lakes-bold';
+  font-weight: bold;
+  font-style: normal;
+  src: url(/src/fonts/TTLakes-Bold.woff) format(woff);
+  font-display: swap;
+}
+@font-face {
+  font-family: 'TT Lakes-medium';
+  font-weight: 500;
+  font-style: normal;
+  src: url(/src/fonts/TTLakes-Medium.woff) format(woff);
+  font-display: swap;
+}
