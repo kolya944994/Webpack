@@ -6,10 +6,10 @@
   font-family: 'TT Lakes', sans-serif;
   background-color: #f8f8f8; }
 
-.blurriness-messagejs {
-  opacity: 0.05; }
-
-.blurriness-telephonejs {
+.blurriness-messagejs,
+.blurriness-telephonejs,
+.blurriness-message-headerjs,
+.blurriness-telephone-headerjs {
   opacity: 0.05; }
 
 .nav {
@@ -156,11 +156,11 @@
   width: 100%; }
 
 @media (min-width: 768px) {
-  .nav__list {
+  .nav .nav__list {
     display: flex; }
-  .nav__list_order-logo {
+  .nav .nav__list_order-logo {
     order: 1; }
-  .nav__menu-right {
+  .nav .nav__menu-right {
     margin-right: 20px; }
   .nav .nav__menu-center {
     display: flex;
@@ -235,7 +235,7 @@
         flex-direction: column; }
   .title-services {
     margin-top: -50px; }
-  .picture__info {
+  .picture .picture__info {
     border-radius: 5px;
     min-width: 50%; } }
 
@@ -300,9 +300,8 @@
     width: 12px;
     height: 12px;
     background-color: #b5b6bc; }
-
-.additional-menu {
-  display: none; }
+  .menu-brand .additional-menu {
+    display: none; }
 
 @media (min-width: 768px) {
   .swiper-wrapper {
@@ -317,29 +316,30 @@
       margin: 10px 15px;
       padding: 15px; }
   .swiper-wrapperjs {
-    grid-auto-rows: auto; }
-  .additional-menu {
-    display: block;
-    position: relative;
-    margin-top: 15px;
-    margin-bottom: 30px; }
-    .additional-menu .additional-menu__button {
-      margin-left: 35px;
-      background-color: #f8f8f8;
-      border: none;
-      cursor: pointer; }
-    .additional-menu .additional-menu__button::before {
-      content: url(./fonts/buttonarrow.svg);
-      position: absolute;
-      left: 0;
-      top: -2px;
-      margin-left: 15px; }
-    .additional-menu .additional-menu__button_click::before {
-      position: absolute;
-      left: 0;
-      top: -5px;
-      margin-left: 15px;
-      transform: rotate(180deg); } }
+    grid-auto-rows: auto; } }
+
+.additional-menu {
+  display: block;
+  position: relative;
+  margin-top: 15px;
+  margin-bottom: 30px; }
+  .additional-menu .additional-menu__button {
+    margin-left: 35px;
+    background-color: #f8f8f8;
+    border: none;
+    cursor: pointer; }
+  .additional-menu .additional-menu__button::before {
+    content: url(./fonts/buttonarrow.svg);
+    position: absolute;
+    left: 0;
+    top: -2px;
+    margin-left: 15px; }
+  .additional-menu .additional-menu__button_click::before {
+    position: absolute;
+    left: 0;
+    top: -5px;
+    margin-left: 15px;
+    transform: rotate(180deg); }
 
 @media (min-width: 1120px) {
   .swiper-wrapper {
@@ -360,44 +360,46 @@
 
 .services {
   background-color: #f8f8f8; }
-  .services .swiper-slide-menu-technique {
-    text-align: end;
-    margin-bottom: 50px;
-    border: 1px solid #eaeaea;
-    padding: 0px 0px;
+
+.swiper-slide-menu-technique {
+  text-align: end;
+  margin-bottom: 50px;
+  border: 1px solid #eaeaea;
+  padding: 0px 0px;
+  background-color: white;
+  border-radius: 7px;
+  height: auto; }
+  .swiper-slide-menu-technique .services__button {
+    margin-right: 10px;
+    display: inline-block;
+    margin-top: 30px;
+    width: 40px;
+    height: 40px;
     background-color: white;
-    border-radius: 7px;
-    height: auto; }
-    .services .swiper-slide-menu-technique .services__button {
-      margin-right: 10px;
-      display: inline-block;
-      margin-top: 30px;
-      width: 40px;
-      height: 40px;
-      background-color: white;
-      border: none;
-      border-radius: 50px;
-      background-position: 50% 50%;
-      border: 2px solid #ff3e79;
-      background-image: url(./fonts/arrow.svg);
-      background-repeat: no-repeat;
-      cursor: pointer;
-      transform: scale(var(--scale));
-      --scale: 1;
-      transition: --scale 0.3s, opacity 0.3s ease; }
-      .services .swiper-slide-menu-technique .services__button:hover {
-        opacity: 0.5;
-        --scale: 1.2; }
-      .services .swiper-slide-menu-technique .services__button:active {
-        opacity: 0.8;
-        --scale: 1.1; }
-    .services .swiper-slide-menu-technique .services__content {
-      margin: 10px 5px;
-      display: flex; }
-  .services .swiper-pagination-bullet {
-    width: 12px;
-    height: 12px;
-    background-color: #b5b6bc; }
+    border: none;
+    border-radius: 50px;
+    background-position: 50% 50%;
+    border: 2px solid #ff3e79;
+    background-image: url(./fonts/arrow.svg);
+    background-repeat: no-repeat;
+    cursor: pointer;
+    transform: scale(var(--scale));
+    --scale: 1;
+    transition: --scale 0.3s, opacity 0.3s ease; }
+    .swiper-slide-menu-technique .services__button:hover {
+      opacity: 0.5;
+      --scale: 1.2; }
+    .swiper-slide-menu-technique .services__button:active {
+      opacity: 0.8;
+      --scale: 1.1; }
+  .swiper-slide-menu-technique .services__content {
+    margin: 10px 5px;
+    display: flex; }
+
+.swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background-color: #b5b6bc; }
 
 .additional-menu-menu-technique {
   display: none; }
@@ -751,7 +753,7 @@ hr {
 .container-active-message {
   width: 320px;
   height: 100%;
-  position: absolute;
+  position: fixed;
   right: 0;
   top: 0;
   box-shadow: 16px 0px 52px 0px #0e185033, -2px 0 4px 0px #454f7e05;
@@ -759,12 +761,13 @@ hr {
   background-color: white;
   z-index: 20; }
 
-.container-active-messagejs {
+.container-active-messagejs,
+.menu-active-messagejs {
   display: block; }
 
 .nav-active-message__button {
   margin: 15px;
-  margin-top: 0;
+  margin-top: 15px;
   width: 40px;
   height: 40px;
   background-color: #ff3e79;
@@ -773,10 +776,8 @@ hr {
   background-repeat: no-repeat;
   background-position: center;
   border: none;
-  --translateX: -88px;
-  --translateY: 47px;
   --scale: 1;
-  transform: translateX(var(--translateX)) scale(var(--scale)) translateY(var(--translateY));
+  transform: scale(var(--scale));
   transition: --scale 0.3s, opacity 0.3s ease; }
   .nav-active-message__button:hover {
     opacity: 0.5;
@@ -844,6 +845,13 @@ hr {
         opacity: 0.8;
         --scale: 1.1; }
 
+@media (min-width: 768px) {
+  .nav-active-message__button {
+    transform: translateX(var(--translateX)) translateY(var(--translateY));
+    --translateX: -88px;
+    --translateY: 47px;
+    margin-top: 0; } }
+
 @media (min-width: 1440px) {
   .container-active-message {
     width: 440px; } }
@@ -851,7 +859,7 @@ hr {
 .container-active-telephone {
   width: 320px;
   height: 100%;
-  position: absolute;
+  position: fixed;
   right: 0;
   top: 0;
   box-shadow: 16px 0px 52px 0px #0e185033, -2px 0 4px 0px #454f7e05;
@@ -859,7 +867,8 @@ hr {
   background-color: white;
   z-index: 20; }
 
-.container-active-telephonejs {
+.container-active-telephonejs,
+.menu-active-telephonejs {
   display: block; }
 
 .nav-active-telephone__button {
