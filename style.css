@@ -334,7 +334,7 @@
         left: 0;
         top: -2px;
         margin-left: 15px; }
-      .additional-menu .additional-menu__button::before {
+      .additional-menu .additional-menu__button_click::before {
         position: absolute;
         left: 0;
         top: -5px;
