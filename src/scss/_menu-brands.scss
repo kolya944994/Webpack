@@ -15,6 +15,7 @@
 }
 .menu-brand {
   background-color: $ghostlyWhite;
+
   .swiper-slide {
     margin-bottom: 50px;
     display: flex;
@@ -62,11 +63,11 @@
     height: 12px;
     background-color: $lightGrey;
   }
-
-  .additional-menu {
-    display: none;
-  }
 }
+.additional-menu {
+  display: none;
+}
+
 @media (min-width: 768px) {
   .swiper-wrapper {
     display: grid;
@@ -85,8 +86,7 @@
   .swiper-wrapperjs {
     grid-auto-rows: auto;
   }
-}
-.menu-brand {
+
   .additional-menu {
     display: block;
     position: relative;
@@ -97,20 +97,20 @@
       background-color: $ghostlyWhite;
       border: none;
       cursor: pointer;
-    }
-    .additional-menu__button::before {
-      content: url(../img/buttonarrow.svg);
-      position: absolute;
-      left: 0;
-      top: -2px;
-      margin-left: 15px;
-    }
-    .additional-menu__button_click::before {
-      position: absolute;
-      left: 0;
-      top: -5px;
-      margin-left: 15px;
-      transform: rotate(180deg);
+      &::before {
+        content: url(../img/buttonarrow.svg);
+        position: absolute;
+        left: 0;
+        top: -2px;
+        margin-left: 15px;
+      }
+      &::before {
+        position: absolute;
+        left: 0;
+        top: -5px;
+        margin-left: 15px;
+        transform: rotate(180deg);
+      }
     }
   }
 }
