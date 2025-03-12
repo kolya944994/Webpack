@@ -318,23 +318,23 @@
   .swiper-wrapperjs {
     grid-auto-rows: auto; } }
 
-.additional-menu {
+.menu-brand .additional-menu {
   display: block;
   position: relative;
   margin-top: 15px;
   margin-bottom: 30px; }
-  .additional-menu .additional-menu__button {
+  .menu-brand .additional-menu .additional-menu__button {
     margin-left: 35px;
     background-color: #f8f8f8;
     border: none;
     cursor: pointer; }
-  .additional-menu .additional-menu__button::before {
+  .menu-brand .additional-menu .additional-menu__button::before {
     content: url(./fonts/buttonarrow.svg);
     position: absolute;
     left: 0;
     top: -2px;
     margin-left: 15px; }
-  .additional-menu .additional-menu__button_click::before {
+  .menu-brand .additional-menu .additional-menu__button_click::before {
     position: absolute;
     left: 0;
     top: -5px;
